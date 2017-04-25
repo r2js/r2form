@@ -1,0 +1,21 @@
+<div id="field-{{ name }}" class="form-group">
+  <label for="f-{{ name }}">{{ name }}</label>
+  <div class="input-group date">
+    <span class="input-group-addon" onclick="$('#f-{{ name }}').data('DateTimePicker').show()">
+      <i class="fa fa-calendar"></i>
+    </span>
+
+    <input type="text" name="{{ name }}" id="f-{{ name }}" class="form-control" />
+  </div>
+</div>
+
+<script>
+  $(function () {
+    if ($.fn.datetimepicker) {
+      $('#f-{{ name }}').datetimepicker({
+        format: 'DD/MM/YYYY HH:mm:00',
+        showTodayButton: true
+      });
+    }
+  });
+</script>

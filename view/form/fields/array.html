@@ -1,0 +1,14 @@
+<div id="field-{{ name }}" class="form-group">
+  <label for="f-{{ name }}">{{ name }}</label>
+  <div>
+    <input type="hidden" name="{{ name }}" id="f-{{ name }}" class="form-control" />
+  </div>
+</div>
+
+<script>
+  $(function () {
+    if ($.fn.select2) {
+      $('.f-{{ name }}').select2({ tags: [] });
+    }
+  });
+</script>
